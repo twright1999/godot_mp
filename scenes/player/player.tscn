@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dq4qruwv6gpv5"]
+
+[ext_resource type="Texture2D" uid="uid://bv84mn0k843wy" path="res://assets/sprites/Velvet_worm.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://bvvb21bnar2lp" path="res://scenes/player/player.gd" id="1_dovo2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+radius = 36.0
+height = 230.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1149543114]
+script = ExtResource("1_dovo2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1145838883]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3vyb7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1395006310]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_3vyb7")
