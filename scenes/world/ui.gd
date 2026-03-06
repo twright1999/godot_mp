@@ -1,7 +1,6 @@
 extends VBoxContainer
 
-
-
+const PLAYER = preload("res://scenes/player/player.tscn")
 
 func _on_connect_button_pressed() -> void:
 	join_server($TextEntryIP.text, int($TextEntryPort.text))
@@ -18,15 +17,23 @@ func create_server() -> void:
 	multiplayer.peer_connected.connect(
 		func(peer_id: int) -> void:
 			print(peer_id)
+			add_player(peer_id)
 	)
 	
 	multiplayer.peer_disconnected.connect(
 		func(peer_id: int) -> void:
 			print(peer_id, "has left")
 	)
+	
+	add_player(multiplayer.get_unique_id())
 
 func join_server(ip, port) -> void:
 	var peer = ENetMultiplayerPeer.new()
 	var success = peer.create_client(ip, port)
 	print(success)
 	multiplayer.multiplayer_peer = peer
+
+func add_player(peer_id):
+	var player = PLAYER.instantiate()
+	add_child(player)
+	

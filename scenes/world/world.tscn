@@ -9,3 +9,5 @@
 position = Vector2(516, 261)
 
 [node name="UI" parent="." unique_id=1160671851 instance=ExtResource("2_sl2e5")]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1909922736]
