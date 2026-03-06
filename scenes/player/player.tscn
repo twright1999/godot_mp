@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dq4qruwv6gpv5"]
 
-[ext_resource type="Texture2D" uid="uid://bv84mn0k843wy" path="res://assets/sprites/Velvet_worm.png" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://bv84mn0k843wy" path="res://assets/sprites/velvet_worm.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bvvb21bnar2lp" path="res://scenes/player/player.gd" id="1_dovo2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dpqbr3mvbqvdp"]
+
+[ext_resource type="Script" uid="uid://cjd3e2wqhml5g" path="res://scenes/world/ui.gd" id="1_qctfa"]
+
+[node name="UI" type="VBoxContainer" unique_id=1160671851]
+custom_minimum_size = Vector2(400, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qctfa")
+
+[node name="TextEntryIP" type="TextEdit" parent="." unique_id=404329461]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+placeholder_text = "IP"
+
+[node name="TextEntryPort" type="TextEdit" parent="." unique_id=1259451989]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+placeholder_text = "Port"
+
+[node name="ConnectButton" type="Button" parent="." unique_id=1208913592]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Connect
+"
+
+[node name="CreateServerButton" type="Button" parent="." unique_id=428846896]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Create Server"
+
+[connection signal="pressed" from="ConnectButton" to="." method="_on_connect_button_pressed"]
+[connection signal="pressed" from="CreateServerButton" to="." method="_on_create_server_button_pressed"]
