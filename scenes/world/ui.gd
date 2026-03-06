@@ -35,5 +35,6 @@ func join_server(ip, port) -> void:
 
 func add_player(peer_id):
 	var player = PLAYER.instantiate()
+	player.name = str(peer_id)
 	add_child(player)
 	
