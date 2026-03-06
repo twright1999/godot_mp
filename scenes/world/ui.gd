@@ -4,7 +4,7 @@ extends VBoxContainer
 
 
 func _on_connect_button_pressed() -> void:
-	join_server($TextEntryIP.text, $TextEntryPort.text)
+	join_server($TextEntryIP.text, int($TextEntryPort.text))
 
 func _on_create_server_button_pressed() -> void:
 	create_server()
