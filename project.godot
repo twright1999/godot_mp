@@ -15,12 +15,17 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="godot_mp"
-run/main_scene="uid://boj0wppufg7fr"
+run/main_scene="uid://cwsshhxcejlrv"
 config/features=PackedStringArray("4.6", "Forward Plus")
+
+[autoload]
+
+MultiplayerManager="*uid://xpj5r2pju6qu"
 
 [file_customization]
 
 folder_colors={
 "res://assets/": "red",
+"res://data/": "yellow",
 "res://scenes/": "green"
 }

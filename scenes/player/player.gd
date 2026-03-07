@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed = 400
 
 func _enter_tree() -> void:
+	# Peer id must match player name in order to control
 	set_multiplayer_authority(int(str(name)))
 
 func get_input():
@@ -10,6 +11,7 @@ func get_input():
 	velocity = input_direction * speed
 
 func _physics_process(_delta):
+	# Only take player input from peer with authority
 	if !is_multiplayer_authority():
 		return
 	get_input()

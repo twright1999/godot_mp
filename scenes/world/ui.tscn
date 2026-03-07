@@ -4,29 +4,44 @@
 
 [node name="UI" type="VBoxContainer" unique_id=1160671851]
 custom_minimum_size = Vector2(400, 0)
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -86.0
+offset_right = 200.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_qctfa")
 
 [node name="TextEntryIP" type="TextEdit" parent="." unique_id=404329461]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+text = "82.5.112.209"
 placeholder_text = "IP"
 
 [node name="TextEntryPort" type="TextEdit" parent="." unique_id=1259451989]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+text = "25565"
 placeholder_text = "Port"
 
 [node name="ConnectButton" type="Button" parent="." unique_id=1208913592]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Connect
 "
 
 [node name="CreateServerButton" type="Button" parent="." unique_id=428846896]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Create Server"
 
 [connection signal="pressed" from="ConnectButton" to="." method="_on_connect_button_pressed"]
